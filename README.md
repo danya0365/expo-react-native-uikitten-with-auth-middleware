@@ -2,6 +2,11 @@
 
 Create Auth Middleware on Expo React native with UIKitten
 
+## Example UI
+
+![auth](example-ui/auth.png "auth")
+![tabbar](example-ui/tabbar.png "tabbar")
+
 ## Getting Started
 
 ```batch
