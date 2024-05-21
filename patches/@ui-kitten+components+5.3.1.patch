@@ -1,0 +1,29 @@
+diff --git a/node_modules/@ui-kitten/components/devsupport/components/measure/measure.component.js b/node_modules/@ui-kitten/components/devsupport/components/measure/measure.component.js
+index 02180f9..b51cca0 100644
+--- a/node_modules/@ui-kitten/components/devsupport/components/measure/measure.component.js
++++ b/node_modules/@ui-kitten/components/devsupport/components/measure/measure.component.js
+@@ -42,7 +42,7 @@ const MeasureElement = (props) => {
+         if (frame.origin.x < window.size.width) {
+             return frame;
+         }
+-        const boundFrame = new type_1.Frame(frame.origin.x - window.size.width, frame.origin.y, frame.size.width, frame.size.height);
++        const boundFrame = new type_1.Frame(frame.origin.x - window.size.width, frame.origin.y, Math.round(frame.size.width), Math.round(frame.size.height));
+         return bindToWindow(boundFrame, window);
+     };
+     const onUIManagerMeasure = (x, y, w, h) => {
+@@ -51,13 +51,13 @@ const MeasureElement = (props) => {
+         }
+         else {
+             const originY = props.shouldUseTopInsets ? y + react_native_1.StatusBar.currentHeight || 0 : y;
+-            const frame = bindToWindow(new type_1.Frame(x, originY, w, h), type_1.Frame.window());
++            const frame = bindToWindow(new type_1.Frame(x, originY, Math.round(w), Math.round(h)), type_1.Frame.window());
+             props.onMeasure(frame);
+         }
+     };
+     const measureSelf = () => {
+         const node = (0, react_native_1.findNodeHandle)(ref.current);
+-        react_native_1.UIManager.measureInWindow(node, onUIManagerMeasure);
++        if (node) react_native_1.UIManager.measureInWindow(node, onUIManagerMeasure);
+     };
+     if (props.force) {
+         measureSelf();

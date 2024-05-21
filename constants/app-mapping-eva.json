@@ -1,0 +1,149 @@
+{
+  "__comment__": "node_modules/@eva-design/eva/mapping.json",
+  "strict": {
+    "text-font-family": "Sarabun_400Regular"
+  },
+  "components": {
+    "Card": {
+      "appearances": {
+        "outline": {
+          "mapping": {
+            "bodyPaddingHorizontal": 0,
+            "bodyPaddingVertical": 0
+          }
+        }
+      }
+    },
+    "CircleButton": {
+      "meta": {
+        "parameters": {
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          },
+          "borderRadius": {
+            "type": "number"
+          },
+          "backgroundColor": {
+            "type": "number"
+          }
+        },
+        "variantGroups": {
+          "shape": {
+            "rounded": {
+              "default": false
+            }
+          }
+        },
+        "states": {},
+        "appearances": {
+          "filled": {
+            "default": true
+          }
+        }
+      },
+      "appearances": {
+        "filled": {
+          "mapping": {
+            "width": 64,
+            "height": 64,
+            "borderRadius": 32,
+            "backgroundColor": "color-primary-default"
+          },
+          "variantGroups": {
+            "shape": {
+              "rounded": {
+                "borderRadius": 16
+              }
+            }
+          }
+        }
+      }
+    },
+    "TopNavigation": {
+      "meta": {
+        "variantGroups": {
+          "alignment": {
+            "center": {
+              "default": true
+            },
+            "start": {
+              "default": false
+            }
+          }
+        }
+      }
+    },
+    "StatusBar": {
+      "meta": {
+        "scope": "mobile",
+        "parameters": {
+          "barStyle": {
+            "type": "string"
+          },
+          "backgroundColor": {
+            "type": "string"
+          }
+        },
+        "appearances": {
+          "default": {
+            "default": true
+          }
+        },
+        "variantGroups": {},
+        "states": {}
+      },
+      "appearances": {
+        "default": {
+          "mapping": {
+            "barStyle": "dark-content",
+            "backgroundColor": "background-basic-color-2"
+          }
+        }
+      }
+    },
+    "SafeAreaLayout": {
+      "meta": {
+        "scope": "mobile",
+        "parameters": {
+          "backgroundColor": {
+            "type": "string"
+          }
+        },
+        "appearances": {
+          "default": {
+            "default": true
+          }
+        },
+        "variantGroups": {
+          "insets": {
+            "top": {
+              "default": false
+            },
+            "bottom": {
+              "default": false
+            }
+          }
+        },
+        "states": {}
+      },
+      "appearances": {
+        "default": {
+          "mapping": {},
+          "variantGroups": {
+            "position": {
+              "top": {
+                "backgroundColor": "background-basic-color-2"
+              },
+              "bottom": {
+                "backgroundColor": "background-basic-color-1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

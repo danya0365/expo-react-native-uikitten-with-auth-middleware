@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Royalty Reward",
+    "slug": "royalty-reward",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/img/icon.png",
+    "scheme": "royalty-reward",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/img/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sbey.royaltyrewardapp",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.sbey.royaltyrewardapp",
+      "versionCode": 1
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/img/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["@ui-kitten/components"]
+        }
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/CSPraJad-v2.ttf",
+            "./assets/fonts/SpaceMono-Regular.ttf",
+            "node_modules/@expo-google-fonts/kanit/Kanit_100Thin.ttf",
+            "node_modules/@expo-google-fonts/kanit/Kanit_400Regular.ttf",
+            "node_modules/@expo-google-fonts/kanit/Kanit_700Bold.ttf",
+            "node_modules/@expo-google-fonts/kanit/Kanit_900Black.ttf",
+            "node_modules/@expo-google-fonts/sarabun/Sarabun_100Thin.ttf",
+            "node_modules/@expo-google-fonts/sarabun/Sarabun_400Regular.ttf",
+            "node_modules/@expo-google-fonts/sarabun/Sarabun_700Bold.ttf",
+            "node_modules/@expo-google-fonts/sarabun/Sarabun_800ExtraBold.ttf",
+            "node_modules/@expo-google-fonts/inter/Inter_300Light.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Use for upload documents required for loan applications or deposit purposes."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "appEnvironment": "local",
+      "apiUrl": "http://localhost/api",
+      "publicUrl": "http://localhost"
+    }
+  }
+}
