@@ -42,7 +42,7 @@ export default (): React.ReactElement => {
   ): React.ReactElement => {
     let appTheme =
       info.item.name === "dark" ? appThemeGreenDark : appThemeGreenLight;
-    if (themeScheme)
+    if (themeScheme === "yellow")
       appTheme =
         info.item.name === "dark" ? appThemeYellowDark : appThemeYellowLight;
     return (
